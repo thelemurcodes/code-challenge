@@ -1,10 +1,13 @@
 require_relative 'parsers/html_parser'
 require_relative 'parsers/test_parser'
+require 'json'
+require 'nokogiri'
+require 'benchmark'
 
 def parse_html_file(html_file)
   # Call the HTML parser to parse the provided HTML file
   HTMLParser.parse(html_file)
-  # TestParser.parse(html_file)
+  TestParser.parse(html_file) # Takes half the time if ran 2nd
 end
 
 def main

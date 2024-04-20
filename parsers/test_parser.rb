@@ -1,5 +1,4 @@
-require 'nokogiri'
-require 'benchmark'
+
 
 module TestParser
   def self.parse(html_file)

@@ -1,6 +1,3 @@
-require 'nokogiri'
-require 'json'
-
 module HTMLParser
   def self.parse(html_file)
     # Read the HTML file
