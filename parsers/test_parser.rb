@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'benchmark'
 
-module TESTParser
+module TestParser
   def self.parse(html_file)
     # Read the HTML file
     html_content = File.read(html_file)
@@ -48,12 +48,12 @@ module TESTParser
           end
         end
 
-        File.open('test_results.json', 'w') do |file|
+        File.open('results/test_results.json', 'w') do |file|
           file.write('{"artworks": ' + JSON.pretty_generate(artworks.map { |artwork| artwork.reject { |k, v| k == :extensions && v.nil? } })+'}')
         end
       end
     end
 
-    puts "TESTParser Execution time: #{time} seconds"
+    puts "TestParser Execution time: #{time.round(4)} seconds"
   end
 end

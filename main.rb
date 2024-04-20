@@ -1,8 +1,10 @@
-require_relative 'html_parser'
+require_relative 'parsers/html_parser'
+require_relative 'parsers/test_parser'
 
 def parse_html_file(html_file)
   # Call the HTML parser to parse the provided HTML file
   HTMLParser.parse(html_file)
+  # TestParser.parse(html_file)
 end
 
 def main
@@ -14,13 +16,13 @@ def main
 
   case choice
   when 1
-    html_file = './files/van-gogh-paintings.html'
+    html_file = 'files/van-gogh-paintings.html'
     parse_html_file(html_file)
   when 2
-    html_file = './extra-results-pages/dali.html'
+    html_file = 'extra-results-pages/dali.html'
     parse_html_file(html_file)
   when 3
-    html_file = './extra-results-pages/pablo-picasso.html'
+    html_file = 'extra-results-pages/pablo-picasso.html'
     parse_html_file(html_file)
   else
     puts "Invalid choice"
