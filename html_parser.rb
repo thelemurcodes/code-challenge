@@ -30,10 +30,6 @@ module HTMLParser
 
       link = artwork['href']
 
-      # process image if found
-      image = artwork.at_css('img')
-      image_data = image['data-key'] if image
-
       artworks << {
         name: name,
         extensions: extensions ? extensions : nil,

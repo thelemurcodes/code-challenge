@@ -14,7 +14,7 @@ def main
 
   case choice
   when 1
-    html_file = './code-challenge/files/van-gogh-paintings.html'
+    html_file = './files/van-gogh-paintings.html'
     parse_html_file(html_file)
   when 2
     html_file = './extra-results-pages/dali.html'
